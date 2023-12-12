@@ -8,7 +8,6 @@
   background-color: black;
   font-weight: bolder;
   font-size: 56px;
-
 }
 
 .share {
@@ -65,7 +64,6 @@ li::before {
   margin-right: 3%;
 }
 
-
 .socialmedia {
   margin: 5% 0% 10% 3%;
 }
@@ -76,7 +74,6 @@ li::before {
   justify-content: center;
   color: #ffffff;
   transition: background-color 0.1s ease;
-
 }
 
 .fa-linkedin-square {
@@ -86,7 +83,7 @@ li::before {
 
 .fa-github-square {
   background-color: white;
-  color:black;
+  color: black;
 }
 
 .fa-facebook-official {
