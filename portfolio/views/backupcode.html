@@ -1,0 +1,98 @@
+<!-- 
+
+
+    <div class="contact" style="margin-top: 10%;padding-left: 5%;">
+      <h1>CONTACT US</h1>
+      <div style="margin-left: 3%;">
+        <div class="phone-wrapper">
+          <i class="glyphicon glyphicon-earphone" style="font-size: xxx-large;"></i>
+          <span class="phone-number">(+91)9315494897</span>
+          <i class="glyphicon glyphicon-chevron-right" style="margin-left: auto;"></i>
+        </div>
+        <div class="email-wrapper">
+          <i class="glyphicon glyphicon-envelope" style="font-size: xxx-large;"></i>
+          <span class="email">ssingh.8721382@gmial.com</span>
+          <i class="glyphicon glyphicon-chevron-right" style="margin-left: auto;"></i>
+        </div>
+        <div class="other-wrapper">
+          <i class="glyphicon glyphicon-paperclip" style="font-size: xxx-large;"></i>
+          <span class="other-links">https://github.com/Ss14721260</span>
+          <i class="glyphicon glyphicon-chevron-right" style="margin-left: auto;"></i>
+        </div>
+      </div>
+    </div>
+    <div class="row-4">
+      <div class="about">
+        <h1>ABOUT</h1>
+        <li>I am Final Year Student of Btech (CSE).</li>
+        <li>Also I am working under Tapmo India company as web
+          developerIntern.</li>
+        <li>Now I am looking forward for career in software field.</li>
+      </div>
+      <div class="text-left" style="margin-top: 10%;padding-left: 5%;">
+        <h1>SOCIAL MEDIA</h1>
+        <div class="socialmedia">
+          <a href="https://www.linkedin.com/in/suraj-singh-0a4994206?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            class="fa fa-lg fa-linkedin-square" style="font-size: 500%;align-items: center;"></a>
+          <a href="https://github.com/Ss14721260/" class="fa fa-lg fa-github-square"
+            style="font-size: 500%; margin-left: 8%;align-items: center;"></a>
+          <a href="https://www.facebook.com/profile.php?id=100072802183671" class="fa fa-lg fa-facebook-official"
+            style="font-size: 500%; margin-left: 8%;align-items: center;"></a>
+          <a href="https://instagram.com/suraj_singh110076?igshid=OGQ5ZDc2ODk2ZA==" class="fa fa-lg fa-instagram"
+            style="font-size: 500%; margin-left: 8%;align-items: center;"></a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Font Size</title>
+  <style>
+    #username-container {
+      width: 200px;
+      height: 100px;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    #username {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="username-container">
+    <p id="username" contenteditable="true" oninput="adjustFontSize(this)"></p>
+  </div>
+
+  <script>
+    function adjustFontSize(element) {
+      // Set a base font size
+      const baseFontSize = 20;
+
+      // Get the content of the div
+      const content = element.innerText;
+
+      // Calculate the ratio of content length to container width
+      const ratio = element.clientWidth / content.length;
+
+      // Set the font size based on the ratio
+      const fontSize = Math.min(baseFontSize, ratio);
+
+      // Apply the font size to the element
+      element.style.fontSize = fontSize + 'px';
+    }
+  </script>
+</body>
+</html>
