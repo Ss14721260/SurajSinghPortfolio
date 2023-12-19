@@ -1,3 +1,4 @@
 {
-            "livePreview.defaultPreviewPath": "/portfolio/views/index.html"
+            "livePreview.defaultPreviewPath": "/portfolio/views/index.html",
+            "editor.tabSize": 2
 }

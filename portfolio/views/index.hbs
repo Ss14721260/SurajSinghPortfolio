@@ -7,31 +7,88 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family='popins'" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
   <meta charset="UTF-8">
-  
-  {{!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> --}}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Suraj Singh</title>
 </head>
 
 <body>
-  <div class="full-width-div">
-    <div class="card">
-      <div id="main">
-
-        <div class="save-share-btn">
-          <button class="save-contact">Save Contact</button>
-          <button class="share">Share</button>
-
+  
+        <div class="img-thumbnail"></div>
+        <div class="text-center">
+          <img class="img-circle" src="/images/IMG_20221213_112643.jpg" alt="photo mising">
+          <h1>Suraj Singh</h1>
+          <h4>Web Developer</h4>
         </div>
-      </div>
-    </div>
-  </div>
+        <button class="save-contact">Save Contact</button>
+        <button class="share">Share</button>
+      
+
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function adjustFontSize() {
+      let screenWidth = window.innerWidth;
+      var letter = document.getElementById('responsiveText').innerText.trim().split(/\s+/);
+      function sortByLength(a, b) {
+        return a.length - b.length;
+      }
+
+      // Sorting the array using the custom comparison function
+      const letterSortesBylength = letter.sort(sortByLength);
+
+      var letterCount = letterSortesBylength[letterSortesBylength.length - 1].length;
+
+      // Adjust font size based on letter count and screen width
+      var fontSize;
+      if (letterCount <= 6) {
+        fontSize = Math.max(3, Math.min(40, screenWidth / letterCount));
+      }
+      else if (letterCount > 6 && letterCount <= 10) {
+        fontSize = Math.max(3, Math.min(26, screenWidth / letterCount));
+      }
+      else if (letterCount > 10 && letterCount <= 15) {
+        fontSize = Math.max(3, Math.min(20, screenWidth / letterCount));
+      }
+      else if (letterCount > 15 && letterCount <= 20) {
+        fontSize = Math.max(3, Math.min(28, screenWidth / letterCount));
+      }
+      else if (letterCount > 20 && letterCount <= 25) {
+        fontSize = Math.max(3, Math.min(12, screenWidth / letterCount));
+      }
+      else if (letterCount > 25 && letterCount <= 30) {
+        fontSize = Math.max(3, Math.min(8, screenWidth / letterCount));
+      }
+      else if (letterCount > 30 && letterCount <= 35) {
+        fontSize = Math.max(3, Math.min(6, screenWidth / letterCount));
+      }
+      else if (letterCount > 35 && letterCount <= 40) {
+        fontSize = Math.max(3, Math.min(5, screenWidth / letterCount));
+      }
+      else if (letterCount > 40 && letterCount <= 45) {
+        fontSize = Math.max(3, Math.min(4, screenWidth / letterCount));
+      }
+      else if (letterCount > 45 && letterCount <= 50) {
+        fontSize = Math.max(3, Math.min(3, screenWidth / letterCount));
+      }
+
+      document.getElementById('responsiveText').style.fontSize = `${fontSize}` + 'px';
+      console.log(letterSortesBylength);
+      console.log(letter);
+    }
+
+    // Adjust font size on initial load
+    adjustFontSize();
+
+    // Adjust font size on window resize
+    window.addEventListener('resize', adjustFontSize);
+  </script>
+
 </body>
 
 </html>

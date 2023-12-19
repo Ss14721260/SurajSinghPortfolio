@@ -1,291 +1,54 @@
-@media only screen and (min-width:0px) and (max-width:768px) {
-  .card {
-    width: 100%;
-  }
-
-  #main {
-    display: block;
-    background-color: aqua;
-    padding-bottom: 2%;
-  }
-
-  .save-contact {
-    margin-left:4%;
-    display: inline;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-top: 2%;
-    color: white;
-    width: 42%;
-    border-radius: 100px;
-    background-color: black;
-    font-weight: bolder;
-    font-size: 150%;
-  }
-
-  .share {
-    margin-left:18%;
-    display: inline-block;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    color: white;
-    width: 30%;
-    border-radius: 100px;
-    background-color: black;
-    font-weight: bolder;
-    font-size: 150%;
-  }
-
-  button:hover {
-    background-color: #133044d8;
-    color: white;
-  }
-
-  li {
-    margin-top: 5%;
-    font-size: xx-large;
-    padding-left: 5%;
-    display: inline-flex;
-    font-weight: auto;
-  }
-
-  li::before {
-    content: "•";
-    padding-right: 5%;
-    font-size: xx-large;
-  }
-
-  .phone-wrapper {
-    margin-top: 10%;
-    display: flex;
-    align-items: center;
-    font-size: xx-large;
-  }
-
-  .email-wrapper {
-    margin-top: 10%;
-    display: flex;
-    align-items: center;
-    font-size: xx-large;
-  }
-
-  .other-wrapper {
-    margin-top: 10%;
-    display: flex;
-    align-items: center;
-    font-size: xx-large;
-  }
-
-  .glyphicon {
-    margin-right: 3%;
-  }
-
-  .socialmedia {
-    margin: 5% 0% 10% 3%;
-  }
-
-  .fa {
-    padding: 0%;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    transition: background-color 0.1s ease;
-  }
-
-  .fa-linkedin-square {
-    background-color: white;
-    color: rgba(8, 133, 250, 0.774);
-  }
-
-  .fa-github-square {
-    background-color: white;
-    color: black;
-  }
-
-  .fa-facebook-official {
-    background-color: white;
-    color: rgba(5, 122, 194, 0.76);
-  }
-
-  .fa-instagram {
-    background-color: white;
-    color: red;
-  }
-
-  .fa:hover {
-    transform: scale(1.2);
-  }
+.img-thumbnail {
+  content: url("/images/CoverImage.png");
+  border: solid var(--bs-border-color);
+  width: 100%;
+  height: auto;
 
 }
 
-/* Default styles for all devices */
-
-/* Tablets (768px to 1024px) */
-@media only screen and (min-width:769px) and (max-width:1024px){
-
-  /* Styles for tablets go here */
-  .card {
-    width: 100%;
-  }
-
-  #main {
-    display:block;
-    background-color: aquamarine;
-    padding-bottom:2%;
-  }
-
-  .save-contact {
-    margin-left:2.5%;
-    display: inline;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-top: 2%;
-    width: 46%;
-    color: white;
-    border-radius: 100px;
-    background-color: black;
-    font-weight: bolder;
-    font-size: 300%;
-  }
-
-  .share {
-    margin-left: 10%;
-    display: inline;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    color: white;
-    width: 34%;
-    border-radius: 100px;
-    background-color: black;
-    font-weight: bolder;
-    font-size: 300%;
-  }
-
-  button:hover {
-    background-color: #133044d8;
-    color: white;
-  }
-
-  li {
-    margin-top: 5%;
-    font-size: xx-large;
-    padding-left: 5%;
-    display: inline-flex;
-    font-weight: auto;
-  }
-
-  li::before {
-    content: "•";
-    padding-right: 5%;
-    font-size: xx-large;
-  }
-
-  .phone-wrapper {
-    margin-top: 10%;
-    display: flex;
-    align-items: center;
-    font-size: xx-large;
-  }
-
-  .email-wrapper {
-    margin-top: 10%;
-    display: flex;
-    align-items: center;
-    font-size: xx-large;
-  }
-
-  .other-wrapper {
-    margin-top: 10%;
-    display: flex;
-    align-items: center;
-    font-size: xx-large;
-  }
-
-  .glyphicon {
-    margin-right: 3%;
-  }
-
-  .socialmedia {
-    margin: 5% 0% 10% 3%;
-  }
-
-  .fa {
-    padding: 0%;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    transition: background-color 0.1s ease;
-  }
-
-  .fa-linkedin-square {
-    background-color: white;
-    color: rgba(8, 133, 250, 0.774);
-  }
-
-  .fa-github-square {
-    background-color: white;
-    color: black;
-  }
-
-  .fa-facebook-official {
-    background-color: white;
-    color: rgba(5, 122, 194, 0.76);
-  }
-
-  .fa-instagram {
-    background-color: white;
-    color: red;
-  }
-
-  .fa:hover {
-    transform: scale(1.2);
-  }
-
+.img-circle{
+  width:150px;
+  height: 150px;
+  margin-top:-20%;
 
 }
 
-/* PCs (larger screens - 1025px and above) */
-@media only screen and (min-width: 1024px){
-  /* Styles for PCs go here */
+.save-contact,
+.share {
+  display: inline-flexbox;
+  border-radius: 100px;
+  font-weight: bolder;
+  width: 40%;
+  margin-left: 7.5%;
+  margin-top: 10%;
+  font-size: 125%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
 
-  .card {
-    width: 100%;
-    padding-left:20%;
-    padding-right:20%;
+.save-contact:hover {
+  background-color: #666ccc;
+}
+
+.share:hover {
+  background-color: #666ccc;
+}
+
+@media only screen and (min-width:768px) {
+  body {
+    padding-left: 25%;
+    padding-right: 25%;
   }
 
-  #main {
-    display:block;
-    background-color: aquamarine;
-    padding-bottom:2%;
-  }
-
-  .save-contact {
-    margin-left:3%;
-    display: inline;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-top: 2%;
-    width: 46%;
-    color: white;
-    border-radius: 100px;
-    background-color: black;
-    font-weight: bolder;
-    font-size: 250%;
-  }
-
+  .save-contact,
   .share {
-    margin-left: 14%;
-    display: inline;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    color: white;
-    width: 34%;
-    border-radius: 100px;
-    background-color: black;
-    font-weight: bolder;
-    font-size: 250%;
+    font-size: 150%;
   }
-
+  .img-circle{
+    width:150px;
+    height: 150px;
+    margin-top:-15%;
+  
+  }
 
 }
