@@ -1,36 +1,92 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
   <link rel="stylesheet" href="/stylesheets/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family='popins'" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Suraj Singh</title>
 </head>
 
 <body>
-  
-        <div class="img-thumbnail"></div>
-        <div class="text-center">
-          <img class="img-circle" src="/images/IMG_20221213_112643.jpg" alt="photo mising">
-          <h1>Suraj Singh</h1>
-          <h4>Web Developer</h4>
+  <div class="main">
+    <div id="banner" class="img-thumbnail" style="padding: 0%;margin:0%;border:initial;"></div>
+    <div id="profilepic" class="text-center">
+      <img class="img-circle" src="/images/IMG_20221213_112643.jpg" alt="photo mising">
+      <h1 id="responsiveText">Susmita Mittal</h1>
+      <h4 onclick="input()">Web Developer</h4>
+    </div>
+    <button class="save-contact" onclick="saveContact()">Save Contact</button>
+    <button class="share" onclick="shareContent()">Share</button>
+    <div class="about">
+      <h3>About</h3>
+      <p>
+        I am a Web Developer at TapMo_India.
+        Responsible for making the components Responsive.
+        I am looking forward to the software engineering field.
+      </p>
+    </div>
+
+    <div class="contactme">
+      <h3>Contact Me</h3>
+      <div class="contact" onclick="whatsApp()">
+        <i class="box bi-whatsapp"></i>
+        <p id="user_whatsapp" class="box-m">+919315494897</p>
+        <i class="fa fa-angle-right" style="font-size:200%;padding-right:2%;"></i>
+      </div>
+      <hr>
+
+      <div class="contact" onclick="saveContact()">
+        <i class="box bi-phone"></i>
+        <p id="user_phone_number" class="box-m">+919315494897</p>
+        <i class="fa fa-angle-right" style="font-size:200%;padding-right:2%;"></i>
+      </div>
+      <hr>
+
+      <div class="contact" onclick="mailto()">
+        <i class="box bi-envelope"></i>
+        <p id="user_email" class="box-m">ssingh.8721382@gmail.com</p>
+        <i class="fa fa-angle-right" style="font-size:200%;padding-right:2%;"></i>
+      </div>
+      <hr>
+      <div class="contact" onclick="location()">
+        <i class="box bi-link-45deg"></i>
+        <p id="user_location" class="box-m">587-chauhan mohalla suraj general store madanpur kahdar new Delhi-110076</p>
+        <i class="fa fa-angle-right" style="font-size:200%;padding-right:2%;"></i>
+      </div>
+      <hr>
+
+    </div>
+    <div class="social">
+      <h3>Social Networks</h3>
+      <div style="margin-top: 5%;">
+        <div class="btnicon">
+          <a href="https://www.facebook.com/profile.php?id=100072802183671">
+            <img src="/icons/facebook.svg" class="img-fluid">
+          </a>
         </div>
-        <button class="save-contact">Save Contact</button>
-        <button class="share">Share</button>
-      
 
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <div class="btnicon">
+          <a href="https://www.instagram.com/suraj_singh110076?igshid=OGQ5ZDc2ODk2ZA==">
+            <img src="/icons/instagram.svg" class="img-fluid">
+          </a>
+        </div>
+        <div class="btnicon">
+          <a href="https://www.youtube.com/channel/UCkJHvC7hs4NlGdy1oz7-agg">
+            <img src="/icons/youtube.svg" class="img-fluid"></a>
+        </div>
+        <div class="btnicon">
+          <a href="https://twitter.com/surajsingh31572">
+            <img src="/icons/twitter.svg" class="img-fluid">
+          </a>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div>
   <script>
     function adjustFontSize() {
       let screenWidth = window.innerWidth;
@@ -78,8 +134,6 @@
       }
 
       document.getElementById('responsiveText').style.fontSize = `${fontSize}` + 'px';
-      console.log(letterSortesBylength);
-      console.log(letter);
     }
 
     // Adjust font size on initial load
@@ -87,6 +141,46 @@
 
     // Adjust font size on window resize
     window.addEventListener('resize', adjustFontSize);
+  </script>
+
+  <script>
+    function saveContact() {
+      const phone = document.getElementById('user_phone_number').innerText;
+      const phonelink = 'tel:' + encodeURIComponent(phone);
+      // Open in calling app
+      window.open(phonelink, '_blank');
+    }
+    function shareContent() {
+      if (navigator.share) {
+        navigator.share({
+          title: "Portfolio",
+          url: "https://x3r7pwpp-8080.inc1.devtunnels.ms/"
+        })
+          .then(() => console.log("shared succesfully"))
+          .catch((error) => console.error('Sharing Error:', error));
+      } else {
+        alert("Sharing Failed your browser does not supports sharing functionality you can share manually");
+      }
+    }
+    function mailto() {
+      const email = document.getElementById('user_email').innerText;
+      const mailto = 'mailto:' + encodeURIComponent(email);
+      // Open mail in emaoil app
+      window.open(mailto, '_blank');
+    }
+    function whatsApp() {
+      const whatsapp_number = document.getElementById('user_whatsapp').innerText;
+      const whatsappme = 'https://api.whatsapp.com/send/?phone=%2B' + encodeURIComponent(whatsapp_number.substring(1, whatsapp_number.length)) + '&text&type=phone_number&app_absent=0';
+      // Open WhatsApp link in a new tab in phone in app
+      window.open(whatsappme, '_blank');
+    }
+    function location(){
+      const input_location=document.getElementById('user_location').innerText;
+      const maplocation= ;
+      // open the link in the map app and in pc in new tab
+      console.log(maplocation)
+      window.open(maplocation, '_blank');
+    }
   </script>
 
 </body>
