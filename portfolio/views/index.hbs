@@ -144,7 +144,7 @@
   </script>
 
   <script>
-    asyncfunction saveContact() {
+    function saveContact() {
       const phone = document.getElementById('user_phone_number').innerText;
       const phonelink = 'tel:' + encodeURIComponent(phone);
       // Open in calling app
@@ -178,7 +178,6 @@
       const input_location=document.getElementById('user_location').innerText;
       const maplocation= '#';
       // open the link in the map app and in pc in new tab
-      console.log(maplocation)
       window.open(maplocation, '_blank');
     }
   </script>
