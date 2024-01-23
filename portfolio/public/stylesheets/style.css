@@ -103,7 +103,14 @@ h3 {
   border: 0.2rem solid #6d686993;
   background-color: #6353558e;
 }
-
+.qrimg{
+    padding: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left:25%;
+    border-radius: 10%;
+    background-color: rgb(72, 207, 207);
+}
 @media only screen and (min-width:768px) {
   body {
     width: 100%;
