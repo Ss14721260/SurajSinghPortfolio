@@ -103,14 +103,49 @@ h3 {
   border: 0.2rem solid #6d686993;
   background-color: #6353558e;
 }
-.qrimg{
-    padding: 2%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left:25%;
-    border-radius: 10%;
-    background-color: rgb(72, 207, 207);
+
+.mobile-phone {
+  margin: auto;
+  margin-top: 10%;
+  padding: 10px 10px 30px;
+  width: 350px;
+  height: 500px;
+  margin-bottom: 5%;
+  box-shadow: 0 0 20px #e2e2e2;
+  border-radius: 30px;
 }
+
+.screen {
+  padding-top:5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  border-radius: 30px;
+  overflow-y: auto;
+}
+
+.brove {
+  width: 150px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  margin: 0 100px;
+  border-radius: 0 0 20px 20px;
+}
+
+.speaker {
+  width: 60px;
+  height: 5px;
+  background: #d2d2d2;
+  display: block;
+  margin: auto;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+
 @media only screen and (min-width:768px) {
   body {
     width: 100%;
@@ -131,6 +166,45 @@ h3 {
   }
 
 }
+
+.mobile-phone {
+  margin: auto;
+  margin-top: 10%;
+  padding: 10px 10px 30px;
+  width: 350px;
+  height: 500px;
+  margin-bottom: 5%;
+  box-shadow: 0 0 20px #e2e2e2;
+  border-radius: 30px;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  border-radius: 30px;
+  overflow-y: auto;
+}
+
+.brove {
+  width: 150px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  margin: 0 100px;
+  border-radius: 0 0 20px 20px;
+}
+
+.speaker {
+  width: 60px;
+  height: 5px;
+  background: #d2d2d2;
+  display: block;
+  margin: auto;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+
 @media only screen and (max-width:768px) {
   .main{
    border: 2px solid rgba(165, 37, 37, 0);
